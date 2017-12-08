@@ -31,7 +31,7 @@ public LoginPage enterLoginToUserAccount(String login) {
 }
 public HomePage enterPasswordToUserAccount(String password) {
 	
-	ops.writeToWebElement(fieldPassword, password)
+	ops.writeToWebElementWithTestIsDisplayed(fieldPassword, password)
 	.clickOnWebElement(buttonSubmit);
 	
 	System.out.println("Login and password are entered");
