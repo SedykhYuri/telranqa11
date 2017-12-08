@@ -1,9 +1,1 @@
-# Ignore .settings folder of Eclipse
-.settings/
-.metadata/
-
-# Ignore .project file of Eclipse
-.project
-
-# Ignore Mavens target folder
-target/
+/target/
