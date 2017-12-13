@@ -14,7 +14,7 @@ public class NewArticlePage extends BasePage {
 	WebObject title = new WebObject ("field title","//textarea[@class='textarea-autosize editor-title__input']");//	"//div[@class='editor-title']");
 	WebObject text = new WebObject ("field text boby",	"//iframe[@title='Rich Text Area. Press Alt-Shift-H for help']");
 	WebObject buttonPublish = new WebObject ("button Publish",	"//button[@class='button editor-publish-button is-primary']");
-	WebObject buttonClose = new WebObject ("button Close",	"//button[@aria-label='Close preview']");
+	WebObject buttonClose = new WebObject ("button Close",	"//button[@class='button editor-ground-control__back is-borderless']");
 	
 	public NewArticlePage enterTitle() {
 		//System.out.println(titles.generateTitile());
