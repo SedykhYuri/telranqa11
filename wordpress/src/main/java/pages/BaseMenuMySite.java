@@ -26,5 +26,11 @@ public class BaseMenuMySite extends BasePage{
 	 WebObject addSitePages = new WebObject("AddSitePages", "//li[2]/ul[1]/li[1]/a[2]");
 	 WebObject addBlogPosts = new WebObject("AddBlogPosts", "//li[2]/ul[1]/li[2]/a[2]");
 	 WebObject addNewSite = new WebObject("AddNewSite", "//a[@class='button my-sites-sidebar__add-new-site is-borderless']");
+	 WebObject buttonAddSitePages = new WebObject("button Add on SitePages","//li[@data-post-type='page']/a[@class='sidebar__button']");
+	
 	 
+	 public BaseMenuMySite clickOnMySite() {
+	 ops.clickOnWebElement(buttonAddSitePages);
+	 return this;
+	 }
 }

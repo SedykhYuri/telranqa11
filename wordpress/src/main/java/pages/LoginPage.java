@@ -23,13 +23,13 @@ WebObject buttonSubmit = new WebObject ("button submit",	"//button[@class='butto
 WebObject fieldPassword = new WebObject ("password field",	"//input[@id='password']");
 
 
-public LoginPage enterLoginToUserAccount(String login) {
+public LoginPage enterLogin(String login) {
 	ops.clickOnWebElement(buttonLogIn)
 	.writeToWebElement(fieldUsernameOrEmail, login)
 	.clickOnWebElement(buttonSubmit);
 	return this;
 }
-public HomePage enterPasswordToUserAccount(String password) {
+public HomePage enterPassword(String password) {
 	
 	ops.writeToWebElementWithTestIsDisplayed(fieldPassword, password)
 	.clickOnWebElement(buttonSubmit);

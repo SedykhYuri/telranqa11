@@ -12,16 +12,12 @@ public class LoginTest extends BaseTest {
 	public HomePage home;
 	
 	@Test (priority=0)
-	public void enterToUserAccountToWordPress() {
+	public void loginToWordPressAccount() {
 		browseToUrl("https://wordpress.com");
 		loginPage = new LoginPage(driver);
-		loginPage.enterLoginToUserAccount("telranenglish")
-		.enterPasswordToUserAccount("TREnglish");
-		home = loginPage.enterLoginToUserAccount("telranenglish")
-				.enterPasswordToUserAccount("TREnglish");
+		loginPage.enterLogin("telranenglish");		
+		home = loginPage.enterPassword("TREnglish");
 		System.out.println("end");
 	}
-	
-	
 	
 }

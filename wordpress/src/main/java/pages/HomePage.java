@@ -10,11 +10,12 @@ public class HomePage extends BasePage {
 		super(driver);
 	}
 
-	WebObject mySiteLink = new WebObject("Move to My Site page", "//*[text() = 'My Site']");
+	WebObject mySiteLink = new WebObject("button Site page", "//*[text() = 'My Site']");
 	
 	
-	public HomePage linkToMySite(){
+	public BaseMenuMySite linkToMySite(){
 		ops.clickOnWebElement(mySiteLink);
-		return this;
+		System.out.println("movie to My Site");
+		return new BaseMenuMySite(driver);
 	}
 }
