@@ -15,7 +15,7 @@ public class NewArticlePage extends BasePage {
 	WebObject text = new WebObject ("field text boby",	"//iframe[@title='Rich Text Area. Press Alt-Shift-H for help']");
 	WebObject buttonPublish = new WebObject ("button Publish",	"//button[@class='button editor-publish-button is-primary']");
 	WebObject buttonClose = new WebObject ("button Close",	"//button[@class='button editor-ground-control__back is-borderless']");
-	
+	WebObject buttonSave = new WebObject ("button Save",	"//span[@class='editor-ground-control__save-status']");
 	public NewArticlePage enterTitle() {
 		//System.out.println(titles.generateTitile());
 	ops.writeToWebElement(title, titles.generateTitile());	
@@ -23,7 +23,14 @@ public class NewArticlePage extends BasePage {
 	}
 	
 	public NewArticlePage enterText() {
-		ops.writeToWebElement(text, textGen.generateRandomString(35)).clickOnWebElement(buttonPublish);
+		ops.writeToWebElement(text, textGen.generateRandomString(35));
+		ops.clickOnWebElement(buttonSave);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		ops.clickOnWebElement(buttonPublish);
 		                	
 		System.out.println("Entered data to Title and text and pressed on button Publish");
 		
