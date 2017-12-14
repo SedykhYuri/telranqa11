@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class TextFileReader {
 	
-	private static String readFile(String filePath) {
+	public static String readFile(String filePath) {
 		 StringBuilder sb = new StringBuilder();
 		 BufferedReader br = null;
 		try {
@@ -35,3 +35,5 @@ public class TextFileReader {
 	}
 
 }
+
+

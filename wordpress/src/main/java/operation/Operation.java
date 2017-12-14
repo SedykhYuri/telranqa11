@@ -23,7 +23,8 @@ public class Operation {
 		this.driver = driver;
 	}
 
-	private WebElement findWebElementOnPage(WebObject webObject) {
+	
+	public WebElement findWebElementOnPage(WebObject webObject) {
 		WebElement element = driver.findElement(By.xpath(webObject.xPath));
 		System.out.println("Web Object " + webObject.description + " was found");
 		return element;
@@ -124,5 +125,6 @@ public class Operation {
 		return findWebElementsOnPage(webObject).size();
 
 	}
+	
 
 }

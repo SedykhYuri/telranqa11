@@ -1,5 +1,8 @@
 package pages;
 
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 
 import webObject.WebObject;
@@ -10,9 +13,10 @@ public class NewArticlePage extends BasePage {
 		super(driver);
 		
 	}
+	private static final String PROJECT_DIR = System.getProperty("user.dir");
 	
 	WebObject title = new WebObject ("field title","//textarea[@class='textarea-autosize editor-title__input']");//	"//div[@class='editor-title']");
-	WebObject text = new WebObject ("field text boby",	"//iframe[@title='Rich Text Area. Press Alt-Shift-H for help']");
+	WebObject text = new WebObject ("field text body",	"//iframe[@title='Rich Text Area. Press Alt-Shift-H for help']");
 	WebObject buttonPublish = new WebObject ("button Publish",	"//button[@class='button editor-publish-button is-primary']");
 	WebObject buttonClose = new WebObject ("button Close",	"//button[@class='button editor-ground-control__back is-borderless']");
 	WebObject buttonSave = new WebObject ("button Save",	"//span[@class='editor-ground-control__save-status']");
@@ -42,4 +46,18 @@ public class NewArticlePage extends BasePage {
 	System.out.println("transmition on my site page");
 	return this;
 	}
+	
+	// method saves random generated site page title to the file pageTitle   
+		public void saveTitle(){
+			String titleText = ops.findWebElementOnPage(title).getText();
+			File dest = new File(PROJECT_DIR
+                    +  File.separator + "src" 
+                    + File.separator + "main" 
+                 	+ File.separator + "resourses"
+                    +File.separator + "pageTitle");
+			writeText.writeFile(titleText, dest);
+			
+
+			//we need to find a short path to the file, not a full path on local HD
+		}
 }
