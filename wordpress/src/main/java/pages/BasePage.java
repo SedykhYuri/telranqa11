@@ -13,6 +13,7 @@ public class BasePage {
 	protected Operation ops;
 	protected GeneratorTitles titles;
 	protected RandomTextGenerator textGen;
+	protected TextFileWriter writeText;
 	
 	public BasePage(WebDriver driver){
 		this.driver = driver;
