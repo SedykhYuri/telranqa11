@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import operation.Operation;
 import utilities.GeneratorTitles;
 import utilities.RandomTextGenerator;
+import utilities.TextFileWriter;
 
 public class BasePage {
 

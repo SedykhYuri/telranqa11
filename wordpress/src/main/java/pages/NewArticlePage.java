@@ -50,12 +50,14 @@ public class NewArticlePage extends BasePage {
 	// method saves random generated site page title to the file pageTitle   
 		public void saveTitle(){
 			String titleText = ops.findWebElementOnPage(title).getText();
-			File dest = new File(PROJECT_DIR
+			
+			String destinationToFile = (PROJECT_DIR
                     +  File.separator + "src" 
                     + File.separator + "main" 
                  	+ File.separator + "resourses"
                     +File.separator + "pageTitle");
-			writeText.writeFile(titleText, dest);
+			
+			writeText.writeFile(titleText, destinationToFile);
 			
 
 			//we need to find a short path to the file, not a full path on local HD
