@@ -58,7 +58,7 @@ public class NewArticlePage extends BasePage {
                     +File.separator + "pageTitle.txt");
 			
 			//File dest = new File (writeToDest);
-			writeText.writeFile(titleText, writeToDest);
+			writeText.writeFile(titleText+";", writeToDest);
 			
 
 			
