@@ -55,12 +55,12 @@ public class NewArticlePage extends BasePage {
                     +  File.separator + "src" 
                     + File.separator + "main" 
                  	+ File.separator + "resourses"
-                    +File.separator + "pageTitle");
+                    +File.separator + "pageTitle.txt");
 			
 			//File dest = new File (writeToDest);
 			writeText.writeFile(titleText, writeToDest);
 			
 
-			//we need to find a short path to the file, not a full path on local HD
+			
 		}
 }
