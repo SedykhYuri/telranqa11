@@ -58,9 +58,22 @@ public class NewArticlePage extends BasePage {
                     +File.separator + "pageTitle.txt");
 			
 			//File dest = new File (writeToDest);
-			writeText.writeFile(titleText+";", writeToDest);
-			
-
-			
+			writeText.addStringToFile(titleText, writeToDest);
+				
+		}
+		/*test example of the method where we get last Title from the file and 
+		  remove it from the file. Not for use at this Class. ONLY FOR EXAMPLE!!!
+		 */
+		public void getLastTitleAndRemooveIt(){
+			String filePath = (PROJECT_DIR
+                    +  File.separator + "src" 
+                    + File.separator + "main" 
+                 	+ File.separator + "resourses"
+                    +File.separator + "pageTitle.txt");
+			String whole = readText.readFile(filePath);
+			System.out.println(whole);
+			String last = readText.getLastString(readText.readFile(filePath));
+			System.out.println(last);
+			writeText.writeStringToFile(writeText.RemooveLastString(whole), filePath);
 		}
 }

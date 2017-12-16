@@ -33,6 +33,15 @@ public class TextFileReader {
 		 String contents = sb.toString();
 		return contents;
 	}
+	
+	//receives a string expression that contains the splitter ";" and returns the last part of it
+		public static String getLastString(String string) {
+			String[] parts = string.split(";");
+			
+			String lastString = parts[parts.length-1];
+			
+			return lastString;
+		}
 
 }
 
