@@ -14,6 +14,20 @@ public class SitePagesPage extends BasePage {
 	}
 	WebObject buttonPages = new WebObject ("button Pages",	"//a[@href='/pages/telranenglish.wordpress.com']");
 	
+	WebObject ellipsesTestLastArticle = new WebObject("Ellipsis on Test article", "//div[@class='card page is-compact']//*[contains(@class,'actions-toggle')][1]");
+	WebObject trashButton = new WebObject("Trash Button after clicking on Ellipsis", "//button[@class='popover__menu-item page__trash-item']");
+	
+	
+	public SitePagesPage clickOnEllipsesOfLastArticle(){
+		ops.clickOnWebElement(ellipsesTestLastArticle);
+		return this;
+	}
+	
+	public SitePagesPage clickOnTrashButton(){
+		ops.clickOnWebElement(trashButton);
+		return this;
+	}
+	
 	public  void firstArticle(){
 		System.out.println("1");
 		//ops.clickOnWebElement(buttonPages);

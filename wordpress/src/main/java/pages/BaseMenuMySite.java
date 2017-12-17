@@ -33,4 +33,9 @@ public class BaseMenuMySite extends BasePage{
 	 ops.clickOnWebElement(buttonAddSitePages);
 	 return this;
 	 }
+	 
+	 public BaseMenuMySite clickOnSitePages() {
+		   ops.clickOnWebElement(sitePages);
+		   return this;
+		   }
 }
